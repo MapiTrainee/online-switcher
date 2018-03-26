@@ -8,6 +8,7 @@ import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.ResponseBody;
 import eu.mapidev.pi.switcher.domain.State;
 import eu.mapidev.pi.switcher.service.StateService;
+import eu.mapidev.pi.switcher.service.Exit;
 
 @Controller
 public class MainController {
@@ -18,6 +19,17 @@ public class MainController {
     @RequestMapping("/")
     public String getIndex() {
 	return "redirect:/index.html";
+    }
+
+    @RequestMapping("/off")
+    public String getOff() {
+	return "redirect:/shutdown.html";
+    }
+
+    @RequestMapping("/exit")
+    public String shutdown() {
+	((Exit) stateService).shutdown();
+	return "redirect:/shutdown.html";
     }
 
     @ResponseBody

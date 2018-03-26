@@ -31,7 +31,7 @@
     text-transform: uppercase;
 }
 
-.btn-on:hover, .btn-off:hover {
+.btn-on:hover, .btn-off:hover, .btn-power:hover {
     color: #fff;
     border: 2px solid #fff;
     background-color: transparent;
@@ -63,4 +63,11 @@ footer {
 
 h1 {
     font-weight: 300;
+}
+
+.btn-power {
+    border: 2px solid #ED64B4;
+    background-color: #ED64B4;
+    color: #333;
+    text-transform: uppercase;
 }
